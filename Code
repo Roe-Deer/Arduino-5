@@ -1,0 +1,28 @@
+int x=11;
+int y=10;
+int z=9;
+int a=13;
+int b;
+
+void setup(){
+    pinMode(x,OUTPUT);
+    pinMode(y,OUTPUT);
+    pinMode(z,OUTPUT);
+    pinMode(a,INPUT_PULLUP);
+}
+
+void loop(){
+    b=digitalRead(a);
+    
+    if (b==HIGH){
+        analogWrite(x,255);
+        analogWrite(y,0);
+        analogWrite(z,0);
+}
+    else{
+        analogWrite(x,0);
+        analogWrite(y,255);
+        analogWrite(z,0);
+    }
+    }
+    
